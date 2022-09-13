@@ -2,8 +2,8 @@ require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config();
 
 
-const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
-const RINKEBY_API_KEY = process.env.RINKEBY_API_KEY;
+const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY_ULR;
+const GOERLI_API_KEY = process.env.GOERLI_PRIVATE_KEY;
 
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -12,7 +12,7 @@ module.exports = {
   networks:{
     rinkeby:{
       url:ALCHEMY_API_KEY,
-      accounts: [RINKEBY_API_KEY],
+      accounts: [GOERLI_API_KEY],
     }
   }
 };
